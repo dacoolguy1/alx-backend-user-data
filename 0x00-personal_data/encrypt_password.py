@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import bcrypt
 
+
 def hash_password(password):
     """Hash the provided password using bcrypt
 
@@ -18,15 +19,16 @@ def hash_password(password):
 
     return hashed_password
 
+
 def is_valid(hashed_password, password):
-    """check if the password is valid
+    """check if the password is hashed
 
     Args:
-        password (str): _description_
+        hashed_password (bool): _description_
+        password (_type_): _description_
 
     Returns:
-        None
+        _type_: _description_
     """
-   
     # Check if the provided password matches the hashed password
     return bcrypt.checkpw(password.encode('utf-8'), hashed_password)
