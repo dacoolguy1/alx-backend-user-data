@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""flask authentication system"""
 from flask import request
 from typing import List, TypeVar
 
@@ -6,11 +7,6 @@ from typing import List, TypeVar
 class Auth():
     """flask authentication system
     """
-    def __init__(self) -> None:
-        """initialise
-        """
-        pass
-
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """_summary_
 
