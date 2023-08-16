@@ -34,3 +34,16 @@ def unauthorezed() -> str:
         str: _description_
     """
     return abort(401, description="Unauthorized")
+
+
+@app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
+def forbidden() -> str:
+    """_Forbidden access
+
+    Args:
+        error (_type_): _description_
+
+    Returns:
+        str: _description_
+    """
+    return abort(403, description="forbidden")
